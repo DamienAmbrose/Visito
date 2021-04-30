@@ -4,3 +4,7 @@ function setCookie() {
   console.log(document.cookie.split(';')[0]);
 }
 
+function removeCookie() {
+  document.cookie = "cookies = declined";
+  console.log(document.cookie.split(';')[0]);
+}
