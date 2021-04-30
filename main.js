@@ -1,15 +1,16 @@
+var all_cookies = document.cookie
+  .split(';')
+  .map(cookie => cookie.split('='))
+  .reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
 
-if (document.cookie.split(';')[0] == "cookies = allowed") {
-  document.getElementById("cookie-container").style.display = "none";
-}
 
 function setCookie() {
-  document.cookie = "cookies = allowed";
-  document.getElementById("cookie-container").style.display = "none";
-  console.log(document.cookie.split(';')[0]);
+  document.cookie = "cookie = allowed"
+}
+function removeCookie() {
+  document.cookie = "cookie = declined"
 }
 
-function removeCookie() {
-  document.cookie = "cookies = declined";
-  console.log(document.cookie.split(';')[0]);
+if (all_cookies.cookie == "cookie = allowed") {
+  document.getElementById("cookie-container").style.display = none;
 }
