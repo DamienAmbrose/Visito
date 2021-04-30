@@ -48,7 +48,7 @@
   ======================================================== -->
 
 </head>
-<body style="text-decoration: none;">
+<body style="text-decoration: none;" onload="popup()">
   <header id="header" class="fixed-top " style="position: fixed;width:100%;height:10%;font-family: Poppins;">
     <div class="container d-flex align-items-center">
 
@@ -253,7 +253,7 @@
       </div>
     </section><!-- End Team Section -->
     
-    <section id="features" class="team section-bg">
+    <section id="cookie-container" class="team section-bg">
       <div class="container">
 
         <div class="section-title">
@@ -266,7 +266,7 @@
                 <h4>COOKIES</h4>
                 <span>Cookies are small pieces of data that help us remember who you are. By using our site, you agree to to our <a href= "cookies.html">Privacy Policy</a>.</span>
                 <a href="#cookie" onclick="setCookie()" style="font-weight: 500; font-size: 16px; letter-spacing: 1px; display: inline-block; padding: 10px 28px 11px 28px; border-radius: 50px; transition: 0.5s; margin: 10px 0 0 0; color: #fff; background: #47b2e4;">Accept</a>
-                <a href="#cookie" style="font-weight: 500; font-size: 16px; letter-spacing: 1px; display: inline-block; padding: 10px 28px 11px 28px; border-radius: 50px; transition: 0.5s; margin: 10px 0 0 0; color: #296885; background: #47b2e400;">Decline</a>
+                <a href="#cookie" onclick="removeCookie()" style="font-weight: 500; font-size: 16px; letter-spacing: 1px; display: inline-block; padding: 10px 28px 11px 28px; border-radius: 50px; transition: 0.5s; margin: 10px 0 0 0; color: #296885; background: #00000000;">Decline</a>
 
               </div>
             </div>
