@@ -1,4 +1,9 @@
 document.cookie = "cookies = waiting";
+
+if (document.cookie.split(';')[0] == "allowed") {
+  document.getElementById("cookie-container").style.display = "none";
+}
+
 function setCookie() {
   document.cookie = "cookies = allowed";
   console.log(document.cookie.split(';')[0]);
