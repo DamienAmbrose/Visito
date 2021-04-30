@@ -1,2 +1,5 @@
-document.cookie = "name=Damien";
-console.log(document.cookie);
+function setCookie() {
+  document.cookie = "cookies = allowed"
+  console.log(document.cookie.split(';')[0])
+}
+
