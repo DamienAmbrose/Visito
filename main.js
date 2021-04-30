@@ -1,6 +1,6 @@
 document.cookie = "cookies = waiting";
 
-if (document.cookie.split(';')[0] == "allowed") {
+if (document.cookie.split(';')[0] == "cookies = allowed") {
   document.getElementById("cookie-container").style.display = "none";
 }
 
