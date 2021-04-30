@@ -18,11 +18,11 @@ var all_cookies = document.cookie
 
 
 function setCookie() {
-  document.cookie = "cookie = allowed"
+  document.cookie = "cookie = allowed";
   document.getElementById("cookie-container").style.display = none;
 }
 function removeCookie() {
-  document.cookie = "cookie = declined"
+  document.cookie = "cookie = declined";
   document.getElementById("cookie-container").style.display = none;
 }
 
