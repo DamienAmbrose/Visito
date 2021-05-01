@@ -98,7 +98,7 @@ function add() {
     list.push(document.getElementById("text").value + "<br>");
     output = list.join(" ");
 document.getElementById("output").innerHTML = output;
-document.cookie = list + "=" + output + ";" + "expires=Fri, 1 Jan 2077 12:00:00 UTC;path=/";
+document.cookie = "list=" + output + ";" + "expires=Fri, 1 Jan 2077 12:00:00 UTC;path=/";
 console.log(document.cookie);
   }
 }
