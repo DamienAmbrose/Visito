@@ -1,0 +1,100 @@
+<html>
+<head>
+  <title>Visito</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://kit.fontawesome.com/fdc41ad447.js" crossorigin="anonymous"></script>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<script src= "main.js"></script>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+
+  <!-- =======================================================
+  * Template Name: Arsha - v4.1.0
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+</head>
+<body style="text-decoration: none;  background: #37517e;font-family: poppins;text-align: center;">
+
+  <header id="header" class="fixed-top " style="position: fixed;width:100%;height:10%;font-family: Poppins;">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html" style="float: left;">Visito</a></h1>
+
+      <nav id="navbar" class="navbar" style="float: right;text-decoration:none;">
+        <ul>
+
+          <li><a class="getstarted scrollto" href="index.html" style="text-decoration:none;">Go Home</a></li>
+        </ul>
+        <i class="fas fa-bars mobile-nav-toggle w3-hide-large"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+<br><br><br>
+  <footer id="footer" style="width: 100%;">
+
+    <div class="footer-newsletter" style="background-color: rgba(0, 0, 0, 0);width: 100%;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div style="margin-left: auto;margin-right: auto;">
+            <h4 style="color: white;font-family: poppins;">Visitor Name</h4>
+            <form action="" method="post">
+              <input type="text" id="text" style="width: 100%;outline-width: 0;border-width:0px;"><input type="submit" onclick="add(); return false"  value="Add" style="border-top-left-radius: 0px;border-bottom-left-radius: 0px;">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </footer>
+<h3  style="color: white;font-family: poppins;" id="output"></h3>
+
+<script>
+
+  var list = [];
+  var output = "";
+function add() {
+  if (document.getElementById("text").value.length != 0 ) {
+
+    list.push(document.getElementById("text").value + "<br>");
+    output = list.join(" ");
+document.getElementById("output").innerHTML = output;
+  }
+}
+
+</script>
+  </body>
+  </html>
