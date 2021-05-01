@@ -92,6 +92,8 @@ function add() {
     list.push(document.getElementById("text").value + "<br>");
     output = list.join(" ");
 document.getElementById("output").innerHTML = output;
+document.cookie = "list=" + output;
+console.log(document.cookie);
   }
 }
 
