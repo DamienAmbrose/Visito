@@ -56,7 +56,7 @@
 
       <nav id="navbar" class="navbar" style="float: right;text-decoration:none;">
         <ul>
-          <li onclick="clear()"><a class="nav-link scrollto active" href="#" style="text-decoration:none;">Home</a></li>
+          <li onclick="clear()"><a class="nav-link scrollto active" href="#" style="text-decoration:none;">Clear</a></li>
           <li><a class="getstarted scrollto" href="index.html" style="text-decoration:none;">Go Home</a></li>
         </ul>
         <i class="fas fa-bars mobile-nav-toggle w3-hide-large"></i>
@@ -91,15 +91,14 @@ var full_cookies = document.cookie
 document.getElementById("output").innerHTML = full_cookies.list;
 
 function clear() {
-  document.cookie = "list=;expires=Fri, 1 Jan 2077 12:00:00 UTC;path=/";
-console.log(document.cookie);
+  list = [];
 output = "";
-document.getElementById("output").innerHTML = output;
-
+document.cookie = "list=" + output + ";" + "expires=Fri, 1 Jan 2077 12:00:00 UTC;path=/";
+console.log(document.cookie);
 }
 
-  var list = [];
-  var output = "";
+  list = [];
+  output = "";
 function add() {
   if (document.getElementById("text").value.length != 0 ) {
 

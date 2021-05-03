@@ -13,11 +13,11 @@ var all_cookies = document.cookie
 
 //Add and remove cookies
 function setCookie() {
-  document.cookie = "cookie = allowed expires=Fri, 1 Jan 2077 12:00:00 UTC; path=/";
+  document.cookie = "cookie=allowed expires=Fri, 1 Jan 2077 12:00:00 UTC; path=/";
   document.getElementById("cookie-container").style.display = "none";
 }
 function removeCookie() {
-  document.cookie = "cookie = declined expires=Fri, 1 Jan 2077 12:00:00 UTC; path=/";
+  document.cookie = "cookie=declined expires=Fri, 1 Jan 2077 12:00:00 UTC; path=/";
   document.getElementById("cookie-container").style.display = "none";
 }
 
