@@ -83,31 +83,35 @@
 <h3  style="color: white;font-family: poppins;" id="output"></h3>
 
 <script>
+  //Split to .notations
 var full_cookies = document.cookie
   .split(';')
   .map(cookie => cookie.split('='))
   .reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
 
-  res = list.split("<br> ");
-  alert(res);
+
+  //Make cookie "List" the output
 document.getElementById("output").innerHTML = full_cookies.list;
 
+//Clear all data
 function clear() {
   list = [];
 output = "";
 document.cookie = "list= expires=Fri, 1 Jan 2077 12:00:00 UTC;path=/";
+document.getElementById("output").innerHTML = output;
 console.log(document.cookie);
 }
 
-
+//Insert to the list
 function add() {
   if (document.getElementById("text").value.length != 0 ) {
 
-    list.push(document.getElementById("text").value + "<br>");
-    output = list.join(" ");
-document.getElementById("output").innerHTML = output;
-document.cookie = "list=" + output + ";" + "expires=Fri, 1 Jan 2077 12:00:00 UTC;path=/";
-console.log(document.cookie);
+    list.push(document.getElementById("text").value);
+    output = list.join("<br> ");
+    document.getElementById("output").innerHTML = output;
+    document.cookie = "list=" + output + ";" + "expires=Fri, 1 Jan 2077 12:00:00 UTC;path=/";
+    console.log(document.cookie);
+
   }
 }
 
