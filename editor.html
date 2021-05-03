@@ -99,9 +99,9 @@ var every_cookie = document.cookie
 
   name_list = every_cookie.all;
 
-  format = name_list.join("<br>");
+  list = name_list.split(",");
 
-  document.getElementById("output").innerHTML= format;
+  document.getElementById("output").innerHTML= list;
 
 //Add
 function add() {
