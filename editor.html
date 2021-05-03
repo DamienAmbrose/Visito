@@ -101,7 +101,11 @@ var every_cookie = document.cookie
 
   list = name_list.split(",");
 
-  document.getElementById("output").innerHTML= list;
+  document.cookie = "all= "+ list + ";expires=Fri, 1 Jan 2077 12:00:00 UTC; path=/";
+
+  remove_commas = list.join("<br>");
+
+  document.getElementById("output").innerHTML= remove_commas;
 
 //Add
 function add() {
