@@ -87,19 +87,21 @@
 //Variables
 var list = [];
 var remove_commas = "";
+var name_list = "";
 var format = "";
 
-
+//Create objects for .notations
 var every_cookie = document.cookie
   .split(';')
   .map(cookie => cookie.split('='))
   .reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
 
-every_cookie.all
 
-format = list.join("<br>");
+  name_list = every_cookie.all;
 
-document.getElementById("output").innerHTML= format;
+  format = name_list.join("<br>");
+
+  document.getElementById("output").innerHTML= format;
 
 //Add
 function add() {
