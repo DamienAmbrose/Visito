@@ -88,17 +88,18 @@ var full_cookies = document.cookie
   .map(cookie => cookie.split('='))
   .reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
 
+  res = list.split("<br> ");
+  alert(res);
 document.getElementById("output").innerHTML = full_cookies.list;
 
 function clear() {
   list = [];
 output = "";
-document.cookie = "list=" + output + ";" + "expires=Fri, 1 Jan 2077 12:00:00 UTC;path=/";
+document.cookie = "list= expires=Fri, 1 Jan 2077 12:00:00 UTC;path=/";
 console.log(document.cookie);
 }
 
-  list = [];
-  output = "";
+
 function add() {
   if (document.getElementById("text").value.length != 0 ) {
 
