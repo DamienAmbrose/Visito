@@ -7,7 +7,7 @@ var all_cookies = document.cookie
 
 //Do not show cookie pop up if cookie is allowed
      if (all_cookies.cookie == "allowed") {
-        document.getElementById("cookie-container").style.display = "none";
+        document.getElementById("cookiemonster").style.display = "none";
       }
 
 
