@@ -56,7 +56,7 @@
 
       <nav id="navbar" class="navbar" style="float: right;text-decoration:none;">
         <ul>
-          <input type="submit" onclick="clear()" value="Clear" style="background-color: rgba(0, 0, 0, 0);border-width: 0px;color: white;">
+          <input type="submit" onclick="setnone()" value="Clear" style="background-color: rgba(0, 0, 0, 0);border-width: 0px;color: white;">
           <li><a class="getstarted scrollto" href="index.html" style="text-decoration:none;">Go Home</a></li>
         </ul>
         <i class="fas fa-bars mobile-nav-toggle w3-hide-large"></i>
@@ -91,6 +91,8 @@ var name_list = "";
 var format = "";
 
 //Create objects for .notations
+
+
 var every_cookie = document.cookie
   .split(';')
   .map(cookie => cookie.split('='))
@@ -110,6 +112,10 @@ var every_cookie = document.cookie
 //Add
 function add() {
 
+    check_var = list.includes(document.getElementById("text").value);
+
+    alert(check_var);
+    
     list.push(document.getElementById("text").value);
 
     remove_commas = list.join("<br>");
@@ -121,10 +127,12 @@ function add() {
 
 
 //Clear
-function clear() {
+function setnone() {
     list = [];
     
-    document.getElementById("output").innerHTML= "";
+    remove_commas = "";
+
+    document.getElementById("output").innerHTML= remove_commas;
 
 }
 
