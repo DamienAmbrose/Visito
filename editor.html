@@ -56,7 +56,8 @@
 
       <nav id="navbar" class="navbar" style="float: right;text-decoration:none;">
         <ul>
-          <input type="submit" onclick="setnone()" value="Clear" style="background-color: rgba(0, 0, 0, 0);border-width: 0px;color: white;">
+          <input type="submit" onclick="setnone()" value="Clear" style="background-color: rgba(0, 0, 0, 0);border-width: 0px;color: white;" id= "sort">
+          <input type="submit" onclick="sort()" value="Sort" style="background-color: rgba(0, 0, 0, 0);border-width: 0px;color: white;">
           <li><a class="getstarted scrollto" href="index.html" style="text-decoration:none;">Go Home</a></li>
         </ul>
         <i class="fas fa-bars mobile-nav-toggle w3-hide-large"></i>
@@ -73,7 +74,7 @@
           <div style="margin-left: auto;margin-right: auto;">
             <h4 style="color: white;font-family: poppins;">Visitor Name</h4>
             <form action="" method="post">
-              <input type="text" id="text" style="width: 100%;outline-width: 0;border-width:0px;"><input type="submit" onclick="add(); return false"  value="Add" style="border-top-left-radius: 0px;border-bottom-left-radius: 0px;">
+              <input type="text" id="text" placeholder="Type here" style="width: 100%;outline-width: 0;border-width:0px;"><input type="submit" onclick="add(); return false"  value="Add" style="border-top-left-radius: 0px;border-bottom-left-radius: 0px;">
             </form>
           </div>
         </div>
@@ -109,6 +110,10 @@ var every_cookie = document.cookie
 
   document.getElementById("output").innerHTML= remove_commas;
 
+  sorted = list.sort();
+
+  sorted_filter = sorted.join("<br>");
+
 //Add
 function add() {
 
@@ -116,16 +121,32 @@ function add() {
 
     if (check_var == false) {
     
+    
+
     list.push(document.getElementById("text").value);
 
     remove_commas = list.join("<br>");
 
     document.getElementById("output").innerHTML= remove_commas;
 
+    sorted = list.sort();
 
+    sorted_filter = sorted.join("<br>");
+  } else if (check_var == true) {
+    alert("You already have this person noted down");
   }
   }
 
+  //Sort
+  function sort() {
+      if (document.getElementById("sort").value == Sort) {
+      document.getElementById("output").innerHTML = sorted_filter;
+      document.getElementById("sort").value = Unsort;
+      } else if (document.getElementById("sort").value == Unsort) {
+        document.getElementById("output").innerHTML = list;
+        document.getElementById("sort").value = Sort;
+      }
+  }
 
 //Clear
 function setnone() {
