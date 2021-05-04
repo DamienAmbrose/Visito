@@ -114,7 +114,7 @@ function add() {
 
     check_var = list.includes(document.getElementById("text").value);
 
-    alert(check_var);
+    if (check_var == false) {
     
     list.push(document.getElementById("text").value);
 
@@ -122,8 +122,9 @@ function add() {
 
     document.getElementById("output").innerHTML= remove_commas;
 
-    document.cookie = "all= "+ list + ";expires=Fri, 1 Jan 2077 12:00:00 UTC; path=/";
-}
+
+  }
+  }
 
 
 //Clear
