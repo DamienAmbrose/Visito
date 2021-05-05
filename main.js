@@ -9,8 +9,8 @@ var all_cookies = document.cookie
 
 
 
-  if (all_cookies.cookie == "allowed") {
-    alert("Why?");
+  if (all_cookies.cookie === "allowed") {
+    document.getElementById("cookiemonster").style.display = 'none';
   } 
 
 
