@@ -6,8 +6,8 @@ var all_cookies = document.cookie
 
 
 //Do not show cookie pop up if cookie is allowed
-     if (all_cookies.cookie == "allowed") {
-        document.getElementById("cookiemonster").style.display = "none";
+     if (all_cookies.cookie != "allowed") {
+        document.getElementById("cookiemonster").style.display = "block";
       }
 
 
@@ -17,7 +17,6 @@ function setCookie() {
   document.getElementById("cookiemonster").style.display = "none";
 }
 function removeCookie() {
-  document.cookie = "cookie=declined expires=Fri, 1 Jan 2077 12:00:00 UTC; path=/";
   document.getElementById("cookiemonster").style.display = "none";
 }
 
