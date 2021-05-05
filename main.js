@@ -10,9 +10,9 @@ var all_cookies = document.cookie
 
 
   if (all_cookies.cookie != "") {
-   document.getElementById("cookiemonster").style.display = none;
+   document.getElementById("cookiemonster").style.display = "none";
   } else if (all_cookies.cookie == "") {
-    document.getElementById("cookiemonster").style.display = block;
+    document.getElementById("cookiemonster").style.display = "block";
   }
 
 
