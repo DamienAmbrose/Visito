@@ -7,11 +7,11 @@ var all_cookies = document.cookie
 
 //Do not show cookie pop up if cookie is allowed
 
-  allowence = all_cookies.cookie;
 
-  if (allowence != "") {
+
+  if (all_cookies.cookie != "") {
    document.getElementById("cookiemonster").style.display = none;
-  } else if (allowence == "") {
+  } else if (all_cookies.cookie == "") {
     document.getElementById("cookiemonster").style.display = block;
   }
 
