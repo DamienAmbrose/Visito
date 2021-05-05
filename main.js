@@ -6,7 +6,7 @@ var all_cookies = document.cookie
 
 
 //Do not show cookie pop up if cookie is allowed
-function checkCookie() {
+
   allowence = all_cookies.cookie;
 
   if (allowence != "") {
@@ -15,7 +15,7 @@ function checkCookie() {
     document.getElementById("cookiemonster").style.display = block;
   }
 
-}
+
 
 
 
