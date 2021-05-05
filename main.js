@@ -6,9 +6,19 @@ var all_cookies = document.cookie
 
 
 //Do not show cookie pop up if cookie is allowed
-     if (all_cookies.cookie != "allowed") {
-        document.getElementById("cookiemonster").style.display = "block";
-      }
+function checkCookie() {
+  allowence = all_cookies.cookie;
+
+  if (allowence != "") {
+   document.getElementById("cookiemonster").style.display = none;
+  } else if (allowence == "") {
+    document.getElementById("cookiemonster").style.display = block;
+  }
+
+}
+
+
+
 
 
 //Add and remove cookies
