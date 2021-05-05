@@ -9,11 +9,9 @@ var all_cookies = document.cookie
 
 
 
-  if (all_cookies.cookie != "") {
-   document.getElementById("cookiemonster").style.display = "none";
-  } else if (all_cookies.cookie == "") {
-    document.getElementById("cookiemonster").style.display = "block";
-  }
+  if (all_cookies.cookie == "allowed") {
+    document.getElementById("cookiemonster").style.display = 'none';
+  } 
 
 
 
@@ -23,9 +21,9 @@ var all_cookies = document.cookie
 //Add and remove cookies
 function setCookie() {
   document.cookie = "cookie=allowed; expires=Fri, 1 Jan 2077 12:00:00 UTC; path=/";
-  document.getElementById("cookiemonster").style.display = "none";
+  document.getElementById("cookiemonster").style.display = 'none';
 }
 function removeCookie() {
-  document.getElementById("cookiemonster").style.display = "none";
+  document.getElementById("cookiemonster").style.display = 'none';
 }
 
