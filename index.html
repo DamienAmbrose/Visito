@@ -284,6 +284,25 @@
     </footer><!-- End Footer -->
   
   <script>
+
+//Allow .noatations from objects
+all_cookies = document.cookie
+  .split(';')
+  .map(cookie => cookie.split('='))
+  .reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
+
+
+
+allowence = all_cookies.cookie;
+
+if (allowence != "") {
+ document.getElementById("cookiemonster").style.display = none;
+} else if (allowence == "") {
+  document.getElementById("cookiemonster").style.display = block;
+}
+
+
+
   /**
    * Easy selector helper function
    */
